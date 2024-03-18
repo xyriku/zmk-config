@@ -6,9 +6,6 @@
 #define NAV    4
 
 
-/ {
-    combos {
-        compatible = "zmk,combos";
 		
 / {
     combos {

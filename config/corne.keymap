@@ -19,16 +19,81 @@
     combos {
         compatible = "zmk,combos";
 		
-// COMBO(grave,&kp GRAVE,00 01,BASE GAME SYM,40, 100)
-COMBO(esc,    &kp ESC,    10 11, BASE GAME,40, 100)
-COMBO(lpar,   &kp LPAR,   12 13, BASE GAME,40, 100)
-COMBO(rpar,   &kp RPAR,   16 17, BASE GAME,40, 100)
-COMBO(lbkt,   &kp LBKT,   11 12, BASE GAME,40, 100)
-COMBO(rbkt,   &kp RBKT,   17 18, BASE GAME,40, 100)
-COMBO(del,    &kp DEL,    16 18, BASE GAME SYM,40, 100)
-COMBO(sqt,    &kp SQT,    18 19, BASE GAME SYM,40, 100)
-
-COMBO(capswd, &caps_word, 13 16, BASE,      60, 100)
+/ {
+    combos {
+        compatible = "zmk,combos";
+		
+		combo_grave { 
+			timeout-ms = <40>; 
+			bindings = <&kp GRAVE>; 
+			key-positions = <0 1>; 
+			layers = <BASE GAME>; 
+			require-prior-idle-ms = <80>; 
+  	  };
+		
+		combo_esc { 
+			timeout-ms = <40>; 
+			bindings = <&kp ESC>; 
+			key-positions = <10 11>; 
+			layers = <BASE GAME>; 
+			require-prior-idle-ms = <80>; 
+  	  };
+	
+		combo_lpar { 
+			timeout-ms = <40>; 
+			bindings = <&kp LPAR>; 
+			key-positions = <12 13>; 
+			layers = <BASE GAME>; 
+			require-prior-idle-ms = <80>; 
+  	  };
+	
+		combo_rpar { 
+			timeout-ms = <40>; 
+			bindings = <&kp RPAR>; 
+			key-positions = <16 17>; 
+			layers = <BASE GAME>; 
+			require-prior-idle-ms = <80>; 
+  	  };
+	
+		combo_lbkt { 
+			timeout-ms = <40>; 
+			bindings = <&kp LBKT>; 
+			key-positions = <11 12>; 
+			layers = <BASE GAME>; 
+			require-prior-idle-ms = <80>; 
+   	 };
+	
+		combo_rbkt { 
+			timeout-ms = <40>; 
+			bindings = <&kp RBKT>; 
+			key-positions = <17 18>; 
+			layers = <BASE GAME>; 
+			require-prior-idle-ms = <80>; 
+    };
+	
+		combo_del { 
+			timeout-ms = <40>; 
+			bindings = <&kp DEL>; 
+			key-positions = <16 18>; 
+			layers = <BASE GAME>; 
+			require-prior-idle-ms = <80>; 
+   	 };
+	
+		combo_sqt { 
+			timeout-ms = <40>; 
+			bindings = <&kp SQT>; 
+			key-positions = <18 19>; 
+			layers = <BASE GAME>; 
+			require-prior-idle-ms = <80>; 
+  	  };
+	
+		combo_capswd { 
+			timeout-ms = <60>; 
+			bindings = <&caps_word>; 
+			key-positions = <13 16>; 
+			layers = <BASE GAME>; 
+			require-prior-idle-ms = <100>; 
+   	 };
     };
 };
 

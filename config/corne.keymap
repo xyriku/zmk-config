@@ -13,7 +13,7 @@
 		
 		combo_grave { 
 			timeout-ms = <40>; 
-			bindings = <&kp GRAVE>; 
+			binding = <&kp GRAVE>; 
 			key-positions = <0 1>; 
 			layers = <BASE GAME>; 
 			require-prior-idle-ms = <80>; 

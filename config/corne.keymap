@@ -19,7 +19,7 @@
     combos {
         compatible = "zmk,combos";
 		
-COMBO(grave,&kp GRAVE,00 01,BASE GAME SYM,40, 100)
+// COMBO(grave,&kp GRAVE,00 01,BASE GAME SYM,40, 100)
 COMBO(esc,    &kp ESC,    10 11, BASE GAME,40, 100)
 COMBO(lpar,   &kp LPAR,   12 13, BASE GAME,40, 100)
 COMBO(rpar,   &kp RPAR,   16 17, BASE GAME,40, 100)

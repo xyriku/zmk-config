@@ -6,30 +6,29 @@
 #define NAV    4
 
 
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP) \
     combo_##NAME { \
         timeout-ms = <TERM>; \
         bindings = <BINDINGS>; \
         key-positions = <KEYPOS>; \
         layers = <LAYERS>; \
-        require-prior-idle-ms = <QUICKTAP>; \
-		__VA_ARGS__ \
+        require-prior-idle-ms = <QUICKTAP>; 
     };
 
 / {
     combos {
         compatible = "zmk,combos";
 		
-COMBO(grave,&kp GRAVE,00 01,BASE GAME SYM,40, 100)
-COMBO(esc,    &kp ESC,    10 11, BASE GAME,40, 100)
-COMBO(lpar,   &kp LPAR,   12 13, BASE GAME,40, 100)
-COMBO(rpar,   &kp RPAR,   16 17, BASE GAME,40, 100)
-COMBO(lbkt,   &kp LBKT,   11 12, BASE GAME,40, 100)
-COMBO(rbkt,   &kp RBKT,   17 18, BASE GAME,40, 100)
-COMBO(del,    &kp DEL,    16 18, BASE GAME SYM,40, 150)
-COMBO(sqt,    &kp SQT,    18 19, BASE GAME SYM,40, 100)
+COMBO(grave,&kp GRAVE,00 01,BASE GAME SYM,40)
+COMBO(esc,    &kp ESC,    10 11, BASE GAME,40)
+COMBO(lpar,   &kp LPAR,   12 13, BASE GAME,40)
+COMBO(rpar,   &kp RPAR,   16 17, BASE GAME,40)
+COMBO(lbkt,   &kp LBKT,   11 12, BASE GAME,40)
+COMBO(rbkt,   &kp RBKT,   17 18, BASE GAME,40)
+COMBO(del,    &kp DEL,    16 18, BASE GAME SYM,40)
+COMBO(sqt,    &kp SQT,    18 19, BASE GAME SYM,40)
 
-COMBO(capswd, &caps_word, 13 16, BASE,      60, 200)
+COMBO(capswd, &caps_word, 13 16, BASE,      60,)
     };
 };
 

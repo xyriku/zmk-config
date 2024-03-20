@@ -26,7 +26,7 @@
 			timeout-ms = <30>; 
 			bindings = <&kp GRAVE>; 
 			key-positions = <1 2>; 
-			layers = <BASE GAME>; 
+			layers = <BASE>; 
 			require-prior-idle-ms = <100>; 
   	  };
 		
@@ -42,7 +42,7 @@
 			timeout-ms = <30>; 
 			bindings = <&kp LPAR>; 
 			key-positions = <15 16>; 
-			layers = <BASE GAME>; 
+			layers = <BASE>; 
 			require-prior-idle-ms = <50>; 
   	  };
 	
@@ -50,7 +50,7 @@
 			timeout-ms = <30>; 
 			bindings = <&kp RPAR>; 
 			key-positions = <19 20>; 
-			layers = <BASE GAME>; 
+			layers = <BASE>; 
 			require-prior-idle-ms = <100>; 
   	  };
 	
@@ -58,7 +58,7 @@
 			timeout-ms = <30>; 
 			bindings = <&kp LBKT>; 
 			key-positions = <14 15>; 
-			layers = <BASE GAME>; 
+			layers = <BASE >; 
 			require-prior-idle-ms = <100>; 
    	 };
 	
@@ -66,7 +66,7 @@
 			timeout-ms = <30>; 
 			bindings = <&kp RBKT>; 
 			key-positions = <20 21>; 
-			layers = <BASE GAME>; 
+			layers = <BASE >; 
 			require-prior-idle-ms = <100>; 
     };
 	
@@ -74,7 +74,7 @@
 			timeout-ms = <30>; 
 			bindings = <&kp DEL>; 
 			key-positions = <19 21>; 
-			layers = <BASE GAME>; 
+			layers = <BASE >; 
 			require-prior-idle-ms = <100>; 
    	 };
 	
@@ -82,7 +82,7 @@
 			timeout-ms = <30>; 
 			bindings = <&kp SQT>; 
 			key-positions = <21 22>; 
-			layers = <BASE GAME>; 
+			layers = <BASE >; 
 			require-prior-idle-ms = <100>; 
   	  };
 	
@@ -125,28 +125,28 @@
 	copy: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <110>;
+            tapping-term-ms = <130>;
             bindings = <&kp C>, <&kp LC(C)>;
         };
 
 	paste: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <110>;
+            tapping-term-ms = <130>;
             bindings = <&kp V>, <&kp LC(V)>;
         };
 
 	undo: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <110>;
+            tapping-term-ms = <130>;
             bindings = <&kp Z>, <&kp LC(Z)>;
         };
 
 	redo: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <110>;
+            tapping-term-ms = <130>;
             bindings = <&kp Y>, <&kp LC(Y)>;
         };
 };

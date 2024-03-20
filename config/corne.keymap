@@ -116,7 +116,19 @@
     	bindings = <&kp>, <&kp>;
 	};
 
-	
+	td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp C>, <&kp LC(C)>;
+        };
+
+	td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp V>, <&kp LC(V)>;
+        };
 	
 };
     keymap {
@@ -128,7 +140,7 @@
             bindings = <
 &none				&kp Q 			&kp W 		&kp E 			&kp R  		&kp T 		&kp Y  				&kp U 		&kp I 			&kp O 		&kp P      			&none
 &none				&kp A 			&kp S      	&rpi LCTRL D    	&kp F   	&kp G           &kp H             		&kp J     	&rpi LCTRL K     	&kp L     	&lt NAV SEMI  			&none	
-&none				&rpi LGUI Z		&rpi LALT X     &kp C			&kp V  		&kp B           &kp N             		&kp M         	&kp COMMA         	&rpi LALT DOT   &rpi LGUI SLASH 		&none	
+&none				&rpi LGUI Z		&rpi LALT X     &td0			&td1  		&kp B           &kp N             		&kp M         	&kp COMMA         	&rpi LALT DOT   &rpi LGUI SLASH 		&none	
 						      			&lt FUN TAB	 	&lt SYM SPACE  	&sk LSHFT   	&rpi LS(LA(LCTRL)) ENTER	&kp BSPC 	&kp DEL  		
 
             >;

@@ -122,20 +122,33 @@
     	bindings = <&kp>, <&kp>;
 	};
 
-	td0: tap_dance_0 {
+	copy: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&kp C>, <&kp LC(C)>;
         };
 
-	td1: tap_dance_1 {
+	paste: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&kp V>, <&kp LC(V)>;
         };
-	
+
+	undo: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp Z>, <&kp LC(Z)>;
+        };
+
+	redo: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp Y>, <&kp LC(Y)>;
+        };
 };
     keymap {
         compatible = "zmk,keymap";
@@ -144,9 +157,9 @@
 		default_layer {
 		display-name = "BASE";
             bindings = <
-&none				&kp Q 			&kp W 		&kp E 			&kp R  		&kp T 		&kp Y  				&kp U 		&kp I 			&kp O 		&kp P      			&none
-&none				&kp A 			&kp S      	&rpi LCTRL D    	&kp F   	&kp G           &kp H             		&kp J     	&rpi LCTRL K     	&kp L     	&lt NAV SEMI  			&none	
-&none				&rpi LGUI Z		&rpi LALT X     &td0			&td1  		&kp B           &kp N             		&kp M         	&kp COMMA         	&rpi LALT DOT   &rpi LGUI SLASH 		&none	
+&none				&kp Q 			&kp W 		&kp E 			&kp R  		&kp T 		&redo  				&kp U 		&kp I 			&kp O 		&kp P      			&none
+&none				&rpi LGUI A		&kp S  		&rpi LCTRL D    	&kp F   	&kp G           &kp H             		&kp J     	&rpi LCTRL K     	&kp L     	&lt NAV SEMI  			&none	
+&none				&undo			&rpi LALT X     &copy			&paste 		&kp B           &kp N             		&kp M         	&kp COMMA         	&rpi LALT DOT   &rpi LGUI SLASH 		&none	
 						      			&lt FUN TAB	 	&lt SYM SPACE  	&sk LSHFT   	&rpi LS(LA(LCTRL)) ENTER	&kp BSPC 	&kp DEL  		
 
             >;
@@ -174,7 +187,7 @@
 
 		nav_layer {
 		display-name = "NAV";
-            bindings = <
+            bindings = <	
 &none				&kp LC(RIGHT) 		&kp LC(RIGHT)		&none		&none		&none 		&none				&kp PG_UP	&kp HOME		&kp END		&none				&none	
 &none				&none			&kp LCTRL		&kp PG_DN	&none		&none		&kp LEFT			&kp DOWN	&kp UP			&kp RIGHT	&none				&none	
 &none				&kp LSHFT		&none			&none		&none		&kp LC(LEFT) 	&none				&none		&none			&none		&none				&none	
@@ -185,9 +198,9 @@
 		fun_layer {
 		display-name = "FUN";
             bindings = <
-		&none		&kp PRINTSCREEN		&kp F1			&kp F2		&kp F3		&kp F4 		&none				&none		&none		&none		&none		&none	
-		&none		&none			&kp F5			&kp F6		&kp F7		&kp F8		&none				&none		&none		&none		&none		&none	
-		&none		&none			&kp F9			&kp F10		&kp F11		&kp F12		&none				&none		&none		&none		&none		&none	
+&none				&kp PRINTSCREEN		&kp F1			&kp F2		&kp F3		&kp F4 		&none				&none		&none		&none		&none		&none	
+&none				&none			&kp F5			&kp F6		&kp F7		&kp F8		&none				&none		&none		&none		&none		&none	
+&none				&none			&kp F9			&kp F10		&kp F11		&kp F12		&none				&none		&none		&none		&none		&none	
 										&none		&none		&none		&none				&none		&none		
             >;
         };

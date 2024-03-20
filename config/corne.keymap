@@ -146,7 +146,7 @@
                 &none	&kp Q &kp W &kp E &kp R  &kp T &kp Y  &kp U &kp I &kp O &kp P             &none
 				&none	&kp A     		   &kp S      &rpi LCTRL D    	&kp F    				&kp G            	&kp H             	&kp J    		 	&rpi LCTRL K     	&kp L     	&lt NAV SEMI  &none	
 				&none	&rpi LGUI Z	   &rpi LALT X     &copy    			&paste  				&kp B             	&kp N             	&kp M             	&kp COMMA         	&rpi LALT DOT   		   	&rpi LGUI SLASH &none	
-						               &lt FUN TAB	 	&lt SYM SPACE  	&sk LSHFT   		&kp ENTER  				&kp BSPC 	&kp DEL  		
+						               &lt FUN TAB	 	&lt SYM SPACE  	&sk LSHFT   		&rpi LS(LC(LA(ENTER)))  				&kp BSPC 	&kp DEL  		
 
             >;
         };
@@ -157,7 +157,7 @@
              &none	   &kp Q          &kp W          &kp E             	&kp R             		&kp T             	&kp Y            	&kp U            	&kp I          &kp O            	&kp P             &none	
 				&none	&kp A     		&kp S     		&kp D    	 		&kp F    				&kp G             	&kp H            	&kp J    			&kp K    		&kp L     			&kp SEMI &none	  
 				&none	&kp Z 			&kp X 			&kp C				&kp V     				&kp B             	&kp N             	&kp M             	&kp COMMA      &kp DOT   			&kp SLASH &none	
-				           &lt FUN TAB	&lt SYM SPACE  	&sk LSHFT  &kp ENTER  		&kp BSPC 	&kp DEL  	
+				           &lt FUN TAB	&lt SYM SPACE  	&sk LSHFT  &kp ENTER  		&kp BSPC 	&kp DEL
             >;
         };
 		
@@ -174,9 +174,9 @@
 		 nav_layer {
 		display-name = "NAV";
             bindings = <
-	              &none	  &kp LS(RIGHT) 		&kp LS(RIGHT)		&none		&none		&none 			&none		&kp PG_UP	&kp HOME	&kp END	&none	&none	
+	              &none	  &kp LC(RIGHT) 		&kp LC(RIGHT)		&none		&none		&none 			&none		&kp PG_UP	&kp HOME	&kp END	&none	&none	
 				&none	&none			&kp LCTRL				&kp PG_DN			&none		&none			&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT	&none	&none	
-				&none	&kp LSHFT			&none				&none				&none		&kp LS(LEFT) &none		&none		&none		&none		&none	&none	
+				&none	&kp LSHFT			&none				&none				&none		&kp LC(LEFT) &none		&none		&none		&none		&none	&none	
 							&none				&none		&none			&none		&none		&none		
             >;
         };

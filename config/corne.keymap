@@ -94,7 +94,13 @@
 			require-prior-idle-ms = <100>; 
    	 };
 
-		
+		combo_gamemode { 
+			timeout-ms = <40>; 
+			bindings = <&tog GAME>; 
+			key-positions = <1 10>; 
+			layers = <BASE GAME>; 
+			require-prior-idle-ms = <100>; 
+   	 };
     };
 };
 

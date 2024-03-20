@@ -15,7 +15,6 @@
 #define SYM    2
 #define NAV 3
 #define FUN   4
-#define MEDIA 5
 
 
 		
@@ -191,15 +190,7 @@
             >;
         };
 
-		media_layer {
-		display-name = "MEDIA";
-            bindings = <
-              &none	 &none &none &none &none &none 	&none		&none		&none		&none		&none	&none	
-				&none	&none			&none &none &none &none	&none		&none		&none		&none		&none	&none	
-				&none	&none			&none &none &none &none	&none		&none		&none		&none		&none	&none	
-					&none		&none		&none		&none		&none		&none		
-            >;
-        };
+		
 
 	};
 };

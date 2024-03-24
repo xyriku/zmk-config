@@ -10,11 +10,12 @@
 
 
 
-#define BASE   0
-#define GAME 1
-#define SYM    2
-#define NAV 3
-#define FUN   4
+#define BASE	0
+#define GAME	1
+#define SYM	2
+#define NAV	3
+#define FUN	4
+#define IT	5
 
 
 		
@@ -125,30 +126,32 @@
 	copy: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <150>;
             bindings = <&kp C>, <&kp LC(C)>;
         };
 
 	paste: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <150>;
             bindings = <&kp V>, <&kp LC(V)>;
         };
 
 	undo: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <150>;
             bindings = <&kp Z>, <&kp LC(Z)>;
         };
 
 	redo: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <150>;
             bindings = <&kp Y>, <&kp LC(Y)>;
         };
+
+	
 };
     keymap {
         compatible = "zmk,keymap";
@@ -160,7 +163,7 @@
 &none				&kp Q 			&kp W 		&kp E 			&kp R  		&kp T 		&redo  				&kp U 		&kp I 			&kp O 		&kp P      			&none
 &none				&rpi LGUI A		&kp S  		&rpi LCTRL D    	&kp F   	&kp G           &kp H             		&kp J     	&rpi LCTRL K     	&kp L     	&lt NAV SEMI  			&none	
 &none				&undo			&rpi LALT X     &copy			&paste 		&kp B           &kp N             		&kp M         	&kp COMMA         	&rpi LALT DOT   &rpi LGUI SLASH 		&none	
-						      			&lt FUN TAB	 	&lt SYM SPACE  	&sk LSHFT   	&rpi LS(LA(LCTRL)) ENTER	&kp BSPC 	&kp DEL  		
+						      			&lt FUN TAB	 	&lt SYM SPACE  	&sk LSHFT   	&rpi LS(LA(LCTRL)) ENTER	&lt IT BSPC	&kp DEL  		
 
             >;
         };
@@ -171,7 +174,7 @@
 &none				&kp Q           	&kp W          		&kp E           &kp R           &kp T           &kp Y           		&kp U            &kp I          	&kp O           &kp P           		&none	
 &none				&kp A     		&kp S     		&kp D    	&kp F    	&kp G           &kp H           		&kp J 		 &kp K    		&kp L      	&kp SEMI 			&none	  
 &none				&kp Z 			&kp X 			&kp C		&kp V     	&kp B           &kp N          			&kp M            &kp COMMA      	&kp DOT   	&kp SLASH 			&none	
-	   	        							&lt FUN TAB	&lt SYM SPACE  	&sk LSHFT 	&kp ENTER  			&kp BSPC 	 &sk LCTRL
+	   	        							&lt FUN TAB	&lt SYM SPACE  	&sk LSHFT 	&kp ENTER  			&kp BSPC	 &sk LCTRL
             >;
         };
 		
@@ -205,7 +208,15 @@
             >;
         };
 
-		
+		ithree_layer {
+		display-name = "IT";
+            bindings = <
+&none				&kp LG(N1)		&kp LG(N2)		&kp LG(N3)	&kp LG(N4)	&kp LG(N5)	&kp LG(N6)			&kp LG(N7)	&kp LG(N8)	&kp LG(N9)	&kp LG(N0)	&none	
+&none				&kp LG(LS(N1))		&kp LG(LS(N2))		&kp LG(LS(N3))	&kp LG(LS(N4))	&kp LG(LS(N5))	&kp LG(LS(N6))			&kp LG(LS(N7))	&kp LG(LS(N8))	&kp LG(LS(N9))	&kp LG(LS(N0))	&none	
+&none				&none			&none			&none		&none		&none		&none				&none		&none		&none		&none		&none	
+										&none		&none		&none		&none				&none		&none		
+            >;
+        };
 
 	};
 };

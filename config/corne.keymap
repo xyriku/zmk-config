@@ -138,34 +138,6 @@
     	bindings = <&kp>, <&kp>;
 	};
 
-	copy: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp C>, <&kp LC(C)>;
-        };
-
-	paste: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp V>, <&kp LC(V)>;
-        };
-
-	undo: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp Z>, <&kp LC(Z)>;
-        };
-
-	redo: tap_dance_3 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp Y>, <&kp LC(Y)>;
-        };
-
 	
 };
     keymap {
@@ -175,9 +147,9 @@
 		default_layer {
 		display-name = "BASE";
             bindings = <
-&none				&kp Q 			&kp W 		&kp E 			&kp R  		&kp T 		&redo  				&kp U 		&kp I 			&kp O 		&kp P      			&none
+&none				&kp Q 			&kp W 		&kp E 			&kp R  		&kp T 		&kp Y  				&kp U 		&kp I 			&kp O 		&kp P      			&none
 &none				&rpi LGUI A		&kp S  		&rpi LCTRL D    	&kp F   	&kp G           &kp H             		&kp J     	&rpi LCTRL K     	&kp L     	&lt NAV SEMI  			&none	
-&none				&undo			&rpi LALT X     &copy			&paste 		&kp B           &kp N             		&kp M         	&kp COMMA         	&rpi LALT DOT   &rpi LGUI SLASH 		&none	
+&none				&kp Z			&rpi LALT X     &kp C			&kp V 		&kp B           &kp N             		&kp M         	&kp COMMA         	&rpi LALT DOT   &rpi LGUI SLASH 		&none	
 						      			&lt FUN TAB	 	&lt SYM SPACE  	&sk LSHFT   	&rpi LS(LA(LCTRL)) ENTER	&lt IT BSPC	&kp DEL  		
 
             >;

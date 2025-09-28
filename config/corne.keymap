@@ -118,10 +118,10 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-&none  &kp Q        &kp W        &kp E         &kp R          &kp T              &kp Y                     &kp U     &kp I             &kp O          &kp P            &none
-&none  &kp A        &kp S        &kp D         &kp F          &kp G              &kp H                     &kp J     &kp K             &kp L          &lt NAV SEMI     &none
-&none  &rpi LGUI Z  &rpi LALT X  &rpi LCTRL C  &kp V          &kp B              &kp N                     &kp M     &rpi LCTRL COMMA  &rpi LALT DOT  &rpi LGUI SLASH  &none
-                                 &lt FUN TAB   &lt SYM SPACE  &mt LSHFT SPACE    &rpi LS(LA(LCTRL)) ENTER  &kp BSPC  &kp DEL
+&none  &kp Q        &kp W        &kp E         &kp R          &kp T               &kp Y                     &kp U     &kp I             &kp O          &kp P            &none
+&none  &kp A        &kp S        &kp D         &kp F          &kp G               &kp H                     &kp J     &kp K             &kp L          &lt NAV SEMI     &none
+&none  &rpi LGUI Z  &rpi LALT X  &rpi LCTRL C  &kp V          &kp B               &kp N                     &kp M     &rpi LCTRL COMMA  &rpi LALT DOT  &rpi LGUI SLASH  &none
+                                 &lt FUN TAB   &lt SYM SPACE  &rpi LSHFT SPACE    &rpi LS(LA(LCTRL)) ENTER  &kp BSPC  &kp DEL
             >;
         };
 
